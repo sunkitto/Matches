@@ -27,7 +27,8 @@ class ResultsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.mistakesTextView.text = args.mistakes
+        val text = "Mistakes: " + args.mistakes
+        binding.mistakesTextView.text = text
 
         binding.backToMainMenuButton.setOnClickListener {
             findNavController().navigate(R.id.action_resultsFragment_to_homeFragment)
