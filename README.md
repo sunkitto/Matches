@@ -4,7 +4,7 @@ Memory Matching Game and file sharing service inside an app.
 ⏬[Download from here](https://github.com/sunkitto/Matches/releases/tag/v.1.0.0)⏬
 
 # Screenshot
-![1](https://github.com/sunkitto/Matches/assets/138574608/59567015-269b-4c23-a2f5-692ec81075d2)
+![1](https://github.com/sunkitto/Matches/assets/138574608/eedf19e0-d15a-4c41-899b-12fe5dd9465d)
 
 # Tech Stack
 Kotlin, Room, Dagger Hilt, Coroutines, Jetpack Navigation, One Signal SDK
