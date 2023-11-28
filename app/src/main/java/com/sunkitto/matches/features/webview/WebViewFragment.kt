@@ -16,6 +16,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.sunkitto.matches.R
 import com.sunkitto.matches.databinding.FragmentWebViewBinding
 
 private const val PAGE_LINK = "https://fex.net/"
@@ -36,6 +37,7 @@ class WebViewFragment : Fragment() {
                 uploadMessages?.onReceiveValue(arrayOf(imageUri))
                 uploadMessages = null
             }
+            uploadMessages?.onReceiveValue(null)
         }
 
     private var isCameraPermissionGranted = false
@@ -44,6 +46,11 @@ class WebViewFragment : Fragment() {
             ActivityResultContracts.RequestPermission()
         ) { isGranted ->
             isCameraPermissionGranted = isGranted
+            val navController = findNavController()
+            navController.run {
+                popBackStack()
+                navigate(R.id.webViewFragment)
+            }
         }
 
     override fun onCreateView(
@@ -83,6 +90,7 @@ class WebViewFragment : Fragment() {
                 filePathCallback: ValueCallback<Array<Uri>?>?,
                 fileChooserParams: FileChooserParams?
             ): Boolean {
+                uploadMessages = null
                 val checkCameraPermission = ContextCompat
                     .checkSelfPermission(requireActivity(), Manifest.permission.CAMERA)
 
