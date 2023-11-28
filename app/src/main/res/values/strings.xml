@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Matches</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="statistics">Statistics</string>
+    <string name="back">Back</string>
+    <string name="match_images">Match Images</string>
+    <string name="webview">Web View</string>
+    <string name="start_new_game">Start New Game</string>
+    <string name="choose_source">Choose source</string>
+    <string name="card">Card</string>
+    <string name="smile">Smile</string>
+    <string name="congratulations">Congratulations! You passed the game! \n Here\'s your results</string>
+    <string name="back_to_main_menu">Back To Main Menu</string>
+    <string name="mistakes">"Mistakes: "</string>
+</resources>
